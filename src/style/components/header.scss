@@ -1,0 +1,60 @@
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    height: 4em;
+    background: hsl(209, 23%, 22%);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+
+    .logo {
+        margin-left: 1em;
+        @include verticalCenter;
+        height: auto;
+        width: auto;
+    }
+
+    .btndarkmode {
+        margin-right: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        width: auto;
+        cursor: pointer;
+    }
+
+    .btndarkmode i {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+}
+
+@media (max-width:426px) {
+    .header {
+        .logo {
+            margin-left: 0.5em;
+            font-size: 1em;
+        }
+    }
+}
+@media (max-width:376px) {
+    .header {
+        .btndarkmode{
+            margin-right: 1em;
+        }
+    }
+}
+
+.light-mode .header{
+    background: hsl(0, 0%, 100%);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}

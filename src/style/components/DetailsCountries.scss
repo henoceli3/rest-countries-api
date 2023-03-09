@@ -1,0 +1,139 @@
+.Details {
+    width: 100%;
+    height: 60vh;
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .containerDetails {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: row;
+
+        .flag-part {
+            width: 40%;
+            height: 100%;
+        }
+
+        .detail-of-countrie {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .details-container {
+                width: 90%;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+
+                .first-line {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                }
+
+                .seconde-line {
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                    flex-direction: row;
+                    margin-top: 2em;
+
+                    .parte-one-seconde-line,
+                    .parte-two-seconde-line {
+                        height: 100%;
+                        width: 50%;
+
+                        .key {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            flex-direction: row;
+                        }
+                    }
+                }
+
+                .Third-line {
+                    margin-top: 2em;
+                    width: 100%;
+                    height: 2em;
+                    display: flex;
+                    align-items: center;
+                    // background: #fff;
+
+                    p {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        height: 100%;
+                        width: 100%;
+                        justify-content: flex-start;
+                        .limite {
+                            height: 100%;
+                            width: 5em;
+                            background: hsl(209, 23%, 22%);
+                            margin-left: 0.5em;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: 600;
+
+                            &:hover{
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.light-mode .Details {
+
+    .containerDetails {
+        .detail-of-countrie {   
+
+            .details-container {
+
+                .Third-line {
+
+                    p {
+                        .limite {
+                            background: hsl(0, 0%, 100%);
+                            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:701px) {
+    .Details {
+        width: 100%;
+        height: auto;
+        margin-top: 2em;
+    
+        .containerDetails {
+            flex-direction: column;
+    
+            .flag-part {
+                width: 100%;
+                height: 20em;
+            }
+    
+            .detail-of-countrie {
+                width: 100%;
+                height: 20em;
+            }
+        }
+    }
+}

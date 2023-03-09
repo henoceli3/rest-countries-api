@@ -1,0 +1,239 @@
+.main {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+
+
+    // la ligne de buttons 
+    .btnline {
+        width: 100%;
+        height: 2.5em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2em;
+
+        // l'imput de recherche
+        .imptPosition {
+            position: relative;
+            width: 25em;
+            height: 2.5em;
+            display: flex;
+            align-items: center;
+            margin-left: 2em;
+
+
+            .imput_active i {
+                display: none;
+            }
+
+            .imputSearche {
+                width: 100%;
+                height: 100%;
+                background: hsl(209, 23%, 22%);
+                border: none;
+                outline: none;
+                position: relative;
+                border-radius: 5px;
+                padding: 0.5em;
+                display: flex;
+                font-weight: bold;
+
+                &::placeholder {
+                    text-align: center;
+                    color: hsl(0, 0%, 100%);
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            i {
+                position: absolute;
+                left: 5%;
+            }
+        }
+
+        .annuler {
+            width: 15em;
+            height: 100%;
+            border-radius: 5px;
+            border: none;
+            background: hsla(0, 0%, 100%, 0.433);
+            color: hsl(0, 0%, 100%);
+            font-weight: bold;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        // le meunu dropdowm
+        .selectRegion {
+            width: 12em;
+            height: 2.5em;
+            background: hsl(209, 23%, 22%);
+            margin-right: 5em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-radius: 5px;
+            cursor: pointer;
+
+            p {
+                margin-left: 10%;
+            }
+
+            i {
+                margin-right: 10%;
+            }
+
+            .iconevisble {
+                opacity: 0;
+            }
+
+            ul {
+                position: absolute;
+                top: 110%;
+                width: 100%;
+                background: hsl(209, 23%, 22%);
+                height: 10em;
+                border-radius: 5px;
+                display: none;
+                flex-direction: column;
+                align-items: flex-end;
+
+                li {
+                    flex: 1;
+                    width: 90%;
+                    text-align: start;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        font-weight: 800;
+                        transition: .1s ease-in-out;
+                    }
+
+                }
+            }
+
+            &:hover ul {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .main {
+        .btnline {
+            justify-content: space-between;
+
+            .imptPosition {
+                width: 20em;
+                margin-left: 1em;
+            }
+
+            .selectRegion {
+                margin-right: 1em;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .main {
+        .btnline {
+            .imptPosition {
+                width: 15em;
+            }
+        }
+    }
+}
+
+@media (max-width:671px) {
+    .main {
+        .btnline {
+            .annuler {
+                width: 10em;
+            }
+        }
+    }
+}
+
+@media (max-width:617px) {
+    .main {
+
+        .btnline {
+            flex-direction: column;
+            height: auto;
+            align-items: flex-start;
+
+            .imptPosition {
+                height: 3em;
+                width: 20em;
+                margin-bottom: 1em;
+            }
+
+            .annuler {
+                margin-top: 2em;
+                margin-bottom: 2em;
+                margin-left: 1em;
+                width: 15em;
+                height: 3em;
+            }
+
+            .selectRegion {
+                margin-right: 0em;
+                margin-left: 1em;
+                width: 15em;
+            }
+        }
+    }
+}
+
+// gestion du mode ligth 
+.light-mode .main {
+
+    // la ligne de buttons 
+    .btnline {
+
+        // l'imput de recherche
+        .imptPosition {
+
+            .imput_active i {
+                color: hsl(0, 0%, 52%);
+            }
+
+            .imputSearche {
+                background: hsl(0, 0%, 100%);
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+                &::placeholder {
+                    color: hsl(0, 0%, 52%);
+                }
+            }
+        }
+
+        .annuler {
+            background: hsl(0, 0%, 100%);
+            color: hsl(200, 15%, 8%);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+
+        // le meunu dropdowm
+        .selectRegion {
+            background: hsl(0, 0%, 100%);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+            ul {
+                background: hsl(0, 0%, 100%);
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            }
+
+        }
+    }
+}
